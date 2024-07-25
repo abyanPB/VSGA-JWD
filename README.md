@@ -19,7 +19,7 @@ Sistem Pendaftaran Beasiswa KIPK adalah sebuah aplikasi berbasis web yang memung
 ## Cara Menggunakan
 1. **Kloning Repository**: Kloning repository ini ke komputer Anda.
     ```bash
-    git clone https://github.com/username/repo-name.git
+    git clone https://github.com/abyanPB/VSGA-JWD.git
     ```
 2. **Buka File HTML**: Buka file `index.html` di browser Anda.
 3. **Isi Form Pendaftaran**: Isi form pendaftaran dengan data yang valid.
@@ -27,6 +27,7 @@ Sistem Pendaftaran Beasiswa KIPK adalah sebuah aplikasi berbasis web yang memung
 5. **Submit Form**: Klik tombol "Daftar" untuk mengirimkan pendaftaran.
 
 ## Struktur Direktori
+```bash
 ├──assets
   ├──brand
   ├──dist
@@ -37,7 +38,7 @@ Sistem Pendaftaran Beasiswa KIPK adalah sebuah aplikasi berbasis web yang memung
 ├──images
 ├──pages
 ├──readme.md
-
+```
 
 ## Validasi Form
 - **Nama**: Harus diisi.

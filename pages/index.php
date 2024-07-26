@@ -16,7 +16,7 @@
   <link href="../assets/pricing.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container py-3">
+  <div class="container-fluid py-3" style="max-width:80%;">
   <header>
     <?php
       include '../component/navbar.php';

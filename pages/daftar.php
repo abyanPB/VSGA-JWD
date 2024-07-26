@@ -16,7 +16,7 @@
   <link href="../assets/pricing.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container py-3">
+  <div class="container-fluid py-3" style="max-width:80%;">
   <header>
     <?php
       include '../component/navbar.php';
@@ -38,12 +38,12 @@
             </div>
             <div class="mb-3">
                 <label for="no_hp" class="form-label">Nomor HP</label>
-                <input type="text" class="form-control" id="no_hp" name="no_hp" minlength="12" maxlength="17">
+                <input type="number" class="form-control" id="no_hp" name="no_hp" minlength="12" maxlength="17" required>
             </div>
             <div class="mb-3">
                 <label for="semester" class="form-label">Semester Saat Ini</label>
                 <select class="form-select" id="semester" name="semester" required>
-                    <option value="">Pilih</option>
+                    <option selected disabled value="">Pilih</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

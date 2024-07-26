@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 <head>
-  <script src="../assets/js/color-modes.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
@@ -12,9 +11,8 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.bootstrap5.min.css">
   <link href="../assets/pricing.css" rel="stylesheet">
 </head>
 <body>
@@ -26,9 +24,9 @@
       </div>
     </header>
     <main>
-      <div class="text-center" style="min-height: 330px;">
+      <div style="min-height: 330px;">
         <div class="table-responsive mx-auto">
-          <table id="hasilPengumumanTable" class="table">
+          <table id="hasilPengumumanTable" class="table text-center">
             <thead>
               <tr>
                 <th scope="col">No</th>
@@ -85,17 +83,32 @@
     </main>
     <?php include '../component/footer.php'; ?>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.bootstrap5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
+
   <script>
     $(document).ready(function() {
-      $('#hasilPengumumanTable').DataTable({
-        "paging": true,
-        "searching": true,
-        "info": true,
-        "lengthChange": false,
-        "autoWidth": false
+      var table = $('#hasilPengumumanTable').DataTable({
+        paging: true,
+        searching: true,
+        info: true,
+        lengthChange: false,
+        autoWidth: false,
+        dom: 'Bfrtip',
+        buttons: [
+          'print',
+          {
+            extend: 'excelHtml5',
+            title: 'Data Mahasiswa Pendaftaran'
+          }
+        ]
       });
     });
   </script>
